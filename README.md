@@ -14,9 +14,9 @@ Smaug arrives!
 
 We recently released [Smaug-72B-v0.1](https://huggingface.co/abacusai/Smaug-72B-v0.1) which has taken first place on the Open LLM Leaderboard by HuggingFace. It is the first open-source model to surpass an average score of 80%, and it is nearly 2% better than the next-best open-source model. We also released [Smaug-34B-v0.1](https://huggingface.co/abacusai/Smaug-34B-v0.1), the best 34B model at the time of its release. 
 
-Both models use a new fine-tuning technique, DPOP, and new datasets. We introduce both the technique and the datasets in our new arXiv paper: xxxxxx.
+We created both models using a new fine-tuning technique, DPOP, and new pairwise preference versions of ARC, HellaSwag, and MetaMath. We introduce both the technique and the datasets in our new arXiv paper: xxxxxx.
 
-We show theoretically that the standard DPO loss can lead to a _reduction_ of the model's likelihood of the preferred examples, as long as the relative probability between the preferred and dispreferred classes increases. We then show empirically that this phenomenon occurs when fine-tuning LLMs on common datasets, especially datasets in which the edit distance between pairs of completions is low. Using these insights, we design DPO-Positive (DPOP), a new loss function and training procedure which avoids this failure mode. Surprisingly, we also find that DPOP significantly outperforms DPO across a wide variety of datasets and downstream tasks, including high edit distance ones. Using DPOP, we create Smaug-34B-v0.1 and Smaug-72B-v0.1, which achieve state-of-the-art open-source performance.
+We give theoretical and empirical evidence for a failure mode in the standard DPO loss: on datasets in which the edit distance between pairs of completions is low (such as in math-based datasets), standard DPO loss can lead to a _reduction_ of the model's likelihood of the preferred examples, as long as the relative probability between the preferred and dispreferred classes increases. Using these insights, we design DPO-Positive (DPOP), a new loss function and training procedure which avoids this failure mode. Surprisingly, we also find that DPOP significantly outperforms DPO across a wide variety of datasets and downstream tasks, including datasets with high edit distances between completions. Using DPOP, we create Smaug-34B-v0.1 and Smaug-72B-v0.1, which achieve state-of-the-art open-source performance.
 
 <p align="center"><img src="image/dpop_overview.png" width=700 /></p>
 
@@ -154,6 +154,7 @@ print(find_common_elements(array1, array2))  # Output: [4, 5]
 This program iterates through the elements of the first array (arr1) and checks if each element is present in the second array (arr2). If it is, and the element hasn't been added to the common_elements list yet, it is appended. The function then returns the list of common elements.
 #### Example 4
 **Question**
+
 Identify the named entities (people, organizations, locations) mentioned in the given news article.
 Please generate a JSON dictionary that lists the named entities in three separate groups based on their entity types.
 The key is the type of entity and the value is a list of strings.
@@ -164,7 +165,9 @@ Emerson and Zetsche stated that the strategic location of Berlin, coupled with i
 makes it an ideal choice for expansion. The new Gigafactory aims to meet the growing demand for electric vehicles in Europe
 and contribute to a sustainable future. Volkswagen CEO Herbert Diess welcomed the news, saying greater collaboration will,
 benefit the auto industry's transition to e-mobility.
+
 **Answer**
+
 ```
 {
   "people": ["Adamson Emerson", "Dieter Zetsche", "Herbert Diess"],
