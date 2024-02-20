@@ -6,9 +6,9 @@
 
 Smaug arrives!
 
-We recently released [Smaug-72B-v0.1](https://huggingface.co/abacusai/Smaug-72B-v0.1) which has taken first place on the Open LLM Leaderboard by HuggingFace. It is the first open-source model to surpass an average score of 80%, and it is nearly 2% better than the next-best open-source model. We also released [Smaug-32B-v0.1](https://huggingface.co/abacusai/Smaug-34B-v0.1), the best 34B model at the time of its release. 
+We recently released [Smaug-72B-v0.1](https://huggingface.co/abacusai/Smaug-72B-v0.1) which has taken first place on the Open LLM Leaderboard by HuggingFace. It is the first open-source model to surpass an average score of 80%, and it is nearly 2% better than the next-best open-source model. We also released [Smaug-34B-v0.1](https://huggingface.co/abacusai/Smaug-34B-v0.1), the best 34B model at the time of its release. 
 
-Both models use a new fine-tuning technique, DPOP, and new datasets. We introduce both the technique and dataset in our new arXiv paper: xxxxxx.
+Both models use a new fine-tuning technique, DPOP, and new datasets. We introduce both the technique and the datasets in our new arXiv paper: xxxxxx.
 
 We show theoretically that the standard DPO loss can lead to a _reduction_ of the model's likelihood of the preferred examples, as long as the relative probability between the preferred and dispreferred classes increases. We then show empirically that this phenomenon occurs when fine-tuning LLMs on common datasets, especially datasets in which the edit distance between pairs of completions is low. Using these insights, we design DPO-Positive (DPOP), a new loss function and training procedure which avoids this failure mode. Surprisingly, we also find that DPOP significantly outperforms DPO across a wide variety of datasets and downstream tasks, including high edit distance ones. Using DPOP, we create Smaug-34B-v0.1 and Smaug-72B-v0.1, which achieve state-of-the-art open-source performance.
 
