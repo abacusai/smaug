@@ -1,5 +1,11 @@
 <br/>
-<p align="center"><img src="image/abacus_logo.png" width=800 /></p>
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="image/abacus_logo_dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="image/abacus_logo.png">
+  <img src="image/abacus_logo.png" width=800>
+</picture>
+</p>
 <p align="center"><img src="image/smaug_dragon.png" width=500 /></p>
 
 ----
