@@ -30,7 +30,7 @@ We give theoretical and empirical evidence for a failure mode in the standard DP
 
 The license is therefore the [Tongyi Qianwen LICENSE AGREEMENT](https://github.com/QwenLM/Qwen/blob/main/Tongyi%20Qianwen%20LICENSE%20AGREEMENT).
 
-Please find the model weights [here](https://huggingface.co/abacusai/Smaug-34B-v0.1/tree/main).
+Please find the model weights [here](https://huggingface.co/abacusai/Smaug-72B-v0.1/tree/main).
 
 ### HuggingFace Open LLM Leaderboard Results
 
@@ -47,7 +47,7 @@ results in single model mode:
 | ---------- | ----------- | ------- |
 | 8.18       | 7.34        | 7.76    |
 
-We give sample MT-Bench responses in the [HuggingFace model card](https://huggingface.co/abacusai/Smaug-34B-v0.1).
+We give sample MT-Bench responses in the [HuggingFace model card](https://huggingface.co/abacusai/Smaug-72B-v0.1).
 
 ### Contamination Results
 
