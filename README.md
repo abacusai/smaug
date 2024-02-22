@@ -97,7 +97,7 @@ With reference model jondurbin/bagel-34b-v0.2:
 Please cite the paper if you use data, model, or method in this repo.
 
 ```
-@article{luo2023wizardcoder,
+@article{pal2024smaug,
   title={Smaug: Fixing Failure Modes of Preference Optimisation with DPO-Positive},
   author={Pal, Arka and Karkhanis, Deep and Dooley, Samuel and Roberts, Manley and Naidu, Siddartha and White, Colin},
   journal={arXiv preprint arXiv:2402.13228},
